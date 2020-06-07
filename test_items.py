@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 link = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/'
 
 
-def test_check_buy_button(browser):
+def test_presence_of_buy_button(browser):
     browser.get(link)
     WebDriverWait(browser, 10).until(
         EC.presence_of_element_located((By.CLASS_NAME, "btn-add-to-basket"))
